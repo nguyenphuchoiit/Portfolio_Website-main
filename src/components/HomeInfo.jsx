@@ -12,10 +12,10 @@ const HomeInfo = ({ currentStage, isMenuOpen }) => {
       {currentStage === 1 && (
         <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
           Hi, I'm
-          <span className='font-semibold mx-2 text-white'>Sujit </span>
+          <span className='font-semibold mx-2 text-white'>Phan Vu Thien Thien </span>
           👋
           <br />
-          An AI Fullstack developer From India
+          A Fullstack 3D design developer from VIETNAM
         </h1>
       )}
 
@@ -48,7 +48,7 @@ const HomeInfo = ({ currentStage, isMenuOpen }) => {
       {currentStage === 4 && (
         <div className='info-box'>
           <p className='font-medium sm:text-xl text-center'>
-            Need a project done or looking for a dev? <br /> I'm just a few keystrokes away
+            Need a project done or looking for a design developer ? <br /> I'm just the way to go in designs.
           </p>
 
           <Link to='/contact' className='neo-brutalism-white neo-btn'>
