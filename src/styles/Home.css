@@ -1,0 +1,101 @@
+.glowing-button {
+  position: fixed; /* Keeps the button in view */
+  top: 20px; /* Position from the top */
+  right: 20px; /* Position from the right */
+  background: linear-gradient(135deg, #ff0081, #ff8c00, #fffb00, #00c9ff, #00ff4f);
+  background-size: 400% 400%;
+  color: black;
+  padding: 0.75rem 1.5rem; /* Adjusted padding using rem units */
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1rem; /* Adjusted font size using rem units */
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slightly smaller shadow */
+  animation: glowing 10s ease infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 20; /* Ensure it's above other elements */
+}
+
+.glowing-button:hover {
+  transform: scale(1.05); /* Slightly smaller scale effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.glowing-button:focus {
+  outline: none;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glowing-button {
+    top: 15px; /* Adjusted top position */
+    right: 15px; /* Adjusted right position */
+    padding: 0.6rem 1.2rem; /* Smaller padding for mobile using rem units */
+    font-size: 0.875rem; /* Smaller font size for mobile using rem units */
+  }
+}
+
+@media (max-width: 480px) {
+  .glowing-button {
+    top: 10px; /* Further adjusted top position */
+    right: 10px; /* Further adjusted right position */
+    padding: 0.5rem 1rem; /* Even smaller padding using rem units */
+    font-size: 0.75rem; /* Even smaller font size using rem units */
+  }
+}
+
+/* Home.css */
+.scrollable-section {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+}
+
+.canvas-container {
+  height: auto; /* Allow height to be determined by content */
+  width: 100vw; /* Full width */
+  overflow: hidden; /* Hide any overflow within the container */
+}
+
+
+/* Home.css */
+.home-section {
+  position: relative;
+  width: 100vw;
+  overflow: auto; /* Allows scrolling */
+}
+
+.home-info-container {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 100vh; /* Adjust as needed to control the visible area */
+}
+
+.canvas {
+  width: 100%;
+  height: 100%; /* Ensure it takes up the full height of the container */
+}

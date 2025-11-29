@@ -1,0 +1,54 @@
+/* ARExperience.css */
+.ar-experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: relative;
+  background-color: black; /* Optional, to make sure the background is visible */
+}
+
+.ar-experience {
+  position: relative;
+  width: 640px; /* Fixed width for the AR experience */
+  height: 480px; /* Fixed height for the AR experience */
+  background-color: black; /* Ensure the background of the AR experience is visible */
+}
+
+.video-feed,
+.canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.canvas-overlay {
+  pointer-events: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}

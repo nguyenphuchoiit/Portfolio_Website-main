@@ -1,0 +1,55 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 0 1rem;
+  background-color: white; /* Adjust as needed */
+  z-index: 20; /* Ensure it's above other elements */
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold; /* Make text bold for desktop navigation */
+}
+
+.mobile-menu-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30; /* Ensure it's above the content */
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white; /* Adjust as needed */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow if needed */
+  font-weight: bold; /* Make text bold for mobile navigation */
+  z-index: 30; /* Ensure it's above the content */
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+
+  .mobile-menu-button {
+    display: block; /* Show hamburger icon on mobile */
+    z-index: 30; /* Ensure it's above the content */
+  }
+}
+
+.home-info-container {
+  margin-top: 60px; /* Adjust this value based on the height of your mobile menu */
+}

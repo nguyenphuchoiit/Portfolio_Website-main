@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Styling the widget container */
+.chat-container {
+    position: fixed;
+    bottom: 20px; /* Adjust if needed */
+    right: 20px; /* Adjust if needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure no overflow outside the container */
+    display: flex; /* Flex container for positioning icon */
+    align-items: center; /* Center the icon */
+}
+
+/* Robot icon styling */
+.robot-icon {
+    position: absolute;
+    top: -30px; /* Ensure visibility */
+    right: -10px; /* Adjust to fit */
+    width: 60px;
+    height: 60px;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsm_bNBjMCc6idF-8tZVP3e9VKM8QjYVZeg&s') no-repeat center center;
+    background-size: contain;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1100; /* Ensure it's above the widget */
+}
+
+/* Hover effects */
+.chat-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styles for the Dialogflow Messenger widget */
+df-messenger {
+    --df-messenger-bot-message-background-color: #f0f0f0;
+    --df-messenger-button-titlebar-color: #004d99;
+    --df-messenger-button-titlebar-font-color: #ffffff;
+    --df-messenger-chat-background-color: #ffffff;
+    --df-messenger-chat-bubble-background-color: #e0e0e0;
+    --df-messenger-chat-bubble-font-color: #000000;
+    --df-messenger-user-message-background-color: #004d99;
+    --df-messenger-user-message-font-color: #ffffff;
+}

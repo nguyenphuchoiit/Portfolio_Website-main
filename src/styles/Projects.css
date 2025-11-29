@@ -1,0 +1,49 @@
+/* Projects.module.css */
+
+.descriptionPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the spacing as needed */
+  }
+  
+  .descriptionPoint {
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: color 0.3s, box-shadow 0.3s;
+    font-size: 16px; /* Adjust size as needed */
+  }
+  
+  /* Glowing effect on hover */
+  .descriptionPoint:hover {
+    color: #00aaff; /* Change to your preferred color */
+    box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff; /* Adjust shadow to your liking */
+  }
+  
+  /* Optional: Adding a pulse animation */
+  .descriptionPoint:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(0, 170, 255, 0.3); /* Adjust to match your color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
